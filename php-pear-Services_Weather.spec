@@ -27,7 +27,7 @@ and METAR from noaa.gov are supported. Further services will get
 included, if they become available, have a usable API and are properly
 documented.
 
-This class has in PEAR status: %{_status}.
+In PEAR status of this package is: %{_status}.
 
 %description -l pl
 Services_Weather wyszukuje pogodê, oraz w zale¿no¶ci od u¿ytego
