@@ -1,18 +1,18 @@
 %include	/usr/lib/rpm/macros.php
 %define         _class          Services
 %define         _subclass       Weather
-%define		_status		beta
+%define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} acts as an interface to various online weather-services
 Summary(pl):	%{_pearname} pe³ni rolê interfejsu do ró¿nych serwisów pogodowych
 Name:		php-pear-%{_pearname}
-Version:	1.0.0
-Release:	0.RC2
+Version:	1.0.1
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}RC2.tgz
-# Source0-md5:	d93c70efc6875a0a4584b579dffd5607
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
+# Source0-md5:	339840baf4a7bb0656fef8c3284edc53
 URL:		http://pear.php.net/package/Services_Wheather/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
@@ -40,20 +40,23 @@ odpowiednio udokumentowane.
 Ta klasa ma w PEAR status: %{_status}.
 
 %prep
-%setup -q -c -n %{name}-%{version}RC2
+%setup -q -c
+cd %{_pearname}-%{version}
+sed 's#/usr/local/bin/php#/usr/bin/php#' buildMetarDB.php >> tmp
+mv -f tmp buildMetarDB.php
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
 
-install %{_pearname}-%{version}RC2/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
-install %{_pearname}-%{version}RC2/%{_subclass}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
+install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
+install %{_pearname}-%{version}/%{_subclass}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{_pearname}-%{version}RC2/examples
+%doc %{_pearname}-%{version}/examples
 %{php_pear_dir}/%{_class}/*.php
 %{php_pear_dir}/%{_class}/%{_subclass}
