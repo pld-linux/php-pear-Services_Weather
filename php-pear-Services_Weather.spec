@@ -8,11 +8,11 @@ Summary:	%{_pearname} acts as an interface to various online weather-services
 Summary(pl):	%{_pearname} pe³ni rolê interfejsu do ró¿nych serwisów pogodowych
 Name:		php-pear-%{_pearname}
 Version:	1.0.0
-Release:	0.RC1
+Release:	0.RC2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}RC1.tgz
-# Source0-md5:	a27165c7d7116e85eaaa267e0e5b97fb
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}RC2.tgz
+# Source0-md5:	d93c70efc6875a0a4584b579dffd5607
 URL:		http://pear.php.net/package/Services_Wheather/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
@@ -40,20 +40,20 @@ odpowiednio udokumentowane.
 Ta klasa ma w PEAR status: %{_status}.
 
 %prep
-%setup -q -c -n %{name}-%{version}RC1
+%setup -q -c -n %{name}-%{version}RC2
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
 
-install %{_pearname}-%{version}RC1/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
-install %{_pearname}-%{version}RC1/%{_subclass}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
+install %{_pearname}-%{version}RC2/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
+install %{_pearname}-%{version}RC2/%{_subclass}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{_pearname}-%{version}RC1/examples
+%doc %{_pearname}-%{version}RC2/examples
 %{php_pear_dir}/%{_class}/*.php
 %{php_pear_dir}/%{_class}/%{_subclass}
