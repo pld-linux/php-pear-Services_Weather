@@ -1,11 +1,11 @@
 %include	/usr/lib/rpm/macros.php
-%define         _class          Services
-%define         _subclass       Weather
+%define		_class		Services
+%define		_subclass	Weather
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
 
-Summary:	%{_pearname} acts as an interface to various online weather-services
-Summary(pl):	%{_pearname} pe³ni rolê interfejsu do ró¿nych serwisów pogodowych
+Summary:	%{_pearname} - an interface to various online weather-services
+Summary(pl):	%{_pearname} - interfejs do ró¿nych serwisów pogodowych
 Name:		php-pear-%{_pearname}
 Version:	1.2.1
 Release:	1
