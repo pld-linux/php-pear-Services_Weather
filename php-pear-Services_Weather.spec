@@ -8,7 +8,7 @@ Summary:	%{_pearname} - an interface to various online weather-services
 Summary(pl):	%{_pearname} - interfejs do ró¿nych serwisów pogodowych
 Name:		php-pear-%{_pearname}
 Version:	1.3.1
-Release:	1
+Release:	2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
