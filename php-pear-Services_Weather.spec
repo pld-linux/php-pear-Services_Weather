@@ -4,8 +4,8 @@
 %define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
 
-Summary:	%{_pearname} acts as an interface to various online weather-services.
-Summary(pl):	%{_pearname} pe³ni rolê interfejsu do ró¿nych serwisów pogodowych.
+Summary:	%{_pearname} acts as an interface to various online weather-services
+Summary(pl):	%{_pearname} pe³ni rolê interfejsu do ró¿nych serwisów pogodowych
 Name:		php-pear-%{_pearname}
 Version:	1.0.0
 Release:	0.RC1
@@ -31,11 +31,11 @@ This class has in PEAR status: %{_status}.
 
 %description -l pl
 Services_Weather wyszukuje pogodê, oraz w zale¿no¶ci od u¿ytego
-serwisu, tak¿e prognozê dla podanej lokalizacji. Jak do tej pory,
-GlobalWeather z CapeScience, us³uga XML z weather.ccom oraz METAR z
-noaa.gov s± wspierane. Wsparcie dla kolejnych serwisów zostanie dodane,
-o ile bêd± one dostêpne, bê± mia³y u¿yteczne API i bêd± odpowiednio
-udokumentowane.
+serwisu, tak¿e prognozê dla podanej lokalizacji. Jak do tej pory
+obs³ugiwane s±: GlobalWeather z CapeScience, us³uga XML z weather.com
+oraz METAR z noaa.gov. Wsparcie dla kolejnych serwisów zostanie
+dodane, o ile bêd± one dostêpne, bêd± mia³y u¿yteczne API i bêd±
+odpowiednio udokumentowane.
 
 Ta klasa ma w PEAR status: %{_status}.
 
@@ -56,4 +56,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc %{_pearname}-%{version}RC1/examples
 %{php_pear_dir}/%{_class}/*.php
-%{php_pear_dir}/%{_class}/%{_subclass}/
+%{php_pear_dir}/%{_class}/%{_subclass}
