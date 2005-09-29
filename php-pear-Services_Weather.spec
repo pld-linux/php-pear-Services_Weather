@@ -7,12 +7,12 @@
 Summary:	%{_pearname} - an interface to various online weather-services
 Summary(pl):	%{_pearname} - interfejs do ró¿nych serwisów pogodowych
 Name:		php-pear-%{_pearname}
-Version:	1.3.1
-Release:	2.3
+Version:	1.3.2
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	a84d8dc57e063e8fd615af92a99103c6
+# Source0-md5:	1cbdc5a4bb13bc97cbac62e682fe2980
 URL:		http://pear.php.net/package/Services_Wheather/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
