@@ -7,21 +7,22 @@
 Summary:	%{_pearname} - an interface to various online weather-services
 Summary(pl):	%{_pearname} - interfejs do ró¿nych serwisów pogodowych
 Name:		php-pear-%{_pearname}
-Version:	1.3.2
+Version:	1.4.0
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	1cbdc5a4bb13bc97cbac62e682fe2980
+# Source0-md5:	a83fbf5e2e7ffd22219c513cfefe6b52
 URL:		http://pear.php.net/package/Services_Wheather/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
+Requires:	php-pear-HTTP_Request >= 1.2.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # exclude optional dependencies
-%define		_noautoreq	'pear(Cache.*)' 'pear(DB.*)' 'pear(HTTP/Request.*)' 'pear(SOAP.*)' 'pear(XML/Serializer.*)'
+%define		_noautoreq	'pear(Cache.*)' 'pear(DB.*)' 'pear(HTTP/Request.*)' 'pear(SOAP.*)' 'pear(XML/Serializer.*)' 'pear(Net/FTP.*)'
 
 %description
 Services_Weather searches for given locations and retrieves current
