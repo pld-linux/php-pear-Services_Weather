@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - an interface to various online weather-services
-Summary(pl.UTF-8):   %{_pearname} - interfejs do różnych serwisów pogodowych
+Summary(pl.UTF-8):	%{_pearname} - interfejs do różnych serwisów pogodowych
 Name:		php-pear-%{_pearname}
 Version:	1.4.0
 Release:	1
