@@ -1,13 +1,13 @@
-%include	/usr/lib/rpm/macros.php
 %define		_class		Services
 %define		_subclass	Weather
 %define		_status		stable
-%define		_pearname	%{_class}_%{_subclass}
+%define		_pearname	Services_Weather
+%include	/usr/lib/rpm/macros.php
 Summary:	%{_pearname} - an interface to various online weather-services
 Summary(pl.UTF-8):	%{_pearname} - interfejs do różnych serwisów pogodowych
 Name:		php-pear-%{_pearname}
 Version:	1.4.6
-Release:	1
+Release:	2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -16,8 +16,8 @@ URL:		http://pear.php.net/package/Services_Wheather/
 BuildRequires:	php-pear-PEAR >= 1:1.4.0
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
-Requires:	php-ctype
-Requires:	php-pcre
+Requires:	php(ctype)
+Requires:	php(pcre)
 Requires:	php-pear
 Requires:	php-pear-HTTP_Request >= 1.2.0
 Suggests:	php-pear-Cache
@@ -75,7 +75,7 @@ fi
 %doc install.log
 %doc docs/%{_pearname}/*
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/%{_class}/*.php
-%{php_pear_dir}/%{_class}/%{_subclass}
+%{php_pear_dir}/Services/*.php
+%{php_pear_dir}/Services/Weather
 
 %{php_pear_dir}/data/%{_pearname}
